@@ -1,5 +1,25 @@
-<script></script>
+<script>
+import AppHeader from "./components/AppHeader.vue";
+import AppMain from "./components/AppMain.vue";
+import { store } from "./store";
+import axios from "axios";
+export default {
+	name: "AppRickMorty",
+	components: {
+		AppHeader,
+		AppMain,
+	},
+	data() {
+		return {
+			store,
+		};
+	},
+};
+</script>
 
-<template><h1>Vue Vitte Template (scss)</h1></template>
+<template>
+	<AppHeader />
+	<AppMain />
+</template>
 
 <style></style>
