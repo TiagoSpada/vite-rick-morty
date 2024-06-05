@@ -2,7 +2,7 @@
 import { store } from "../store";
 export default {
 	name: "CardCharacter",
-	props: ["character"],
+	props: ["image", "name", "status", "species"],
 	data() {
 		return {
 			store,
@@ -13,12 +13,12 @@ export default {
 
 <template>
 	<div class="image-character">
-		<img :src="character.image" :alt="character.name" />
+		<img :src="image" :alt="name" />
 	</div>
 	<div class="info-character">
-		<div class="name-charcater">{{ character.name }}</div>
-		<div class="state-charcater">{{ character.status }}</div>
-		<div class="species-character">{{ character.species }}</div>
+		<div class="name-charcater">{{ name }}</div>
+		<div class="state-charcater">{{ status }}</div>
+		<div class="species-character">{{ species }}</div>
 	</div>
 </template>
 <style scoped lang="scss">
